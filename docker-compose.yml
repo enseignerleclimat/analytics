@@ -25,6 +25,7 @@ services:
       # see https://github.com/matomo-org/matomo-nginx
       - ./proxy/conf/matomo.conf:/etc/nginx/conf.d/default.conf:ro
     ports:
+      - "80:80"
       - "443:443"
 
   certbot:

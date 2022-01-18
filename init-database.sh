@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -o allexport;
+source .env;
+set +o allexport;
+
+docker-compose exec -T database mysql -u root -p"$DB_ROOT_PASSWORD" -e "CREATE DATABASE IF NOt EXISTS ${MATOMO_DATABASE_DBNAME}; CREATE USER '${MATOMO_DATABASE_USERNAME}'@'%' IDENTIFIED BY '${MATOMO_DATABASE_PASSWORD}'; GRANT ALL PRIVILEGES ON ${MATOMO_DATABASE_DBNAME}.* TO '${MATOMO_DATABASE_USERNAME}'@'%'; FLUSH PRIVILEGES;";

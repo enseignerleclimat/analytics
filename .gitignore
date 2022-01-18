@@ -11,3 +11,6 @@ proxy/certbot/*
 
 database/data/*
 !database/data/.gitkeep
+
+grafana/storage/*
+!grafana/storage/.gitkeep

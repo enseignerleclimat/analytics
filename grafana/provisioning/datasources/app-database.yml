@@ -1,0 +1,10 @@
+apiVersion: 1
+
+datasources:
+  - name: AppDB
+    url: ${GRAFANA_DATASOURCE_URL}
+    user: ${GRAFANA_DATASOURCE_USER}
+    type: mysql
+    database: ${GRAFANA_DATASOURCE_DBNAME}
+    secureJsonData:
+      password: ${GRAFANA_DATASOURCE_PASSWORD}

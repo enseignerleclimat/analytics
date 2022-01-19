@@ -1,9 +1,16 @@
-db.env
+.env
+docker-compose.override.yml
 
-logs/*
-!logs/.gitkeep
-config/*
-!config/.gitkeep
+matomo/logs/*
+!matomo/logs/.gitkeep
+matomo/config/*
+!matomo/config/.gitkeep
 
 proxy/certbot/*
 !proxy/certbot/.gitkeep
+
+database/data/*
+!database/data/.gitkeep
+
+grafana/storage/*
+!grafana/storage/.gitkeep
